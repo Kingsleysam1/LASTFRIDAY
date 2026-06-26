@@ -1,0 +1,6 @@
+{
+  "name": "The Last Friday",
+  "description": "A premium cinematic movie microsite for the Nigerian action-thriller film The Last Friday.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
