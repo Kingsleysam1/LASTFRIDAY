@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, "Inter", sans-serif;
+  --font-serif: "Georgia", "Playfair Display", serif;
+  --font-display: "Helvetica Neue", Arial, "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: #050505;
+  --color-brand-surface: #111111;
+  --color-brand-red: #B5121B;
+  --color-brand-gold: #D4AF37;
+  --color-brand-muted: #A1A1A1;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom styles for Artistic Flair movie aesthetics */
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Artistic Vignette and Noise Overlays */
+.vignette {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 20%, rgba(0, 0, 0, 0.8) 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  z-index: 6;
+}
+
+/* Artistic Grayscale Filter for Banners */
+.bg-visual-artistic {
+  filter: grayscale(100%) contrast(125%) brightness(85%);
+  opacity: 0.35;
+  transition: all 1.2s ease-in-out;
+}
+
+/* Artistic Laurel Circles */
+.laurel-container {
+  border: 1px solid var(--color-brand-gold);
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 8px;
+  color: var(--color-brand-gold);
+  font-weight: 800;
+  padding: 10px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* Cast cards hover states matching theme */
+.cast-card-artistic {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-top: 2px solid transparent;
+}
+.cast-card-artistic:hover {
+  border-top: 2px solid var(--color-brand-red);
+  background: #1a0000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-red);
+}
+
+/* Hide scrollbar for cast gallery horizontal scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom glowing effects */
+.red-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(181, 18, 27, 0.35);
+  border-color: rgba(181, 18, 27, 0.5);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.glow-text-red {
+  text-shadow: 0 0 12px rgba(181, 18, 27, 0.5);
+}
+
+.glow-text-gold {
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.45);
+}
+
