@@ -38,46 +38,24 @@ export default function FestivalNominations() {
           </div>
 
           {/* Majestic Animated Laurel SVGs */}
+          {/* Majestic Laurel Logo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="flex items-center justify-center gap-4 md:gap-8 mb-8"
+            className="flex items-center justify-center mb-8"
           >
-            {/* Left Laurel Leaf SVG */}
-            <svg className="w-16 h-20 md:w-24 md:h-28 text-brand-gold opacity-80" viewBox="0 0 100 120" fill="currentColor">
-              <path d="M50,110 C40,90 20,80 15,60 C10,45 20,30 35,25 C45,22 50,15 50,5 C50,15 55,22 65,25 C80,30 90,45 85,60 C80,80 60,90 50,110 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-              {/* Leaves */}
-              <path d="M48,95 C40,85 28,80 25,72 C22,65 28,58 35,58" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M48,75 C38,68 28,62 27,52 C26,45 34,40 40,42" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M48,55 C40,48 32,42 33,32 C34,25 42,22 46,26" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="50" cy="110" r="3" fill="currentColor" />
-            </svg>
-
-            {/* Central Badge */}
-            <div className="flex flex-col items-center max-w-lg">
-              <p className="text-[10px] font-mono tracking-[0.4em] text-brand-gold font-bold uppercase mb-2">
-                OFFICIAL SELECTION
-              </p>
-              <h3 className="text-xl md:text-3xl font-display font-extrabold text-white tracking-widest leading-snug uppercase">
-                TORONTO INTERNATIONAL NOLLYWOOD FILM FESTIVAL
-              </h3>
-              <div className="w-16 h-[1px] bg-brand-gold my-4" />
-              <p className="text-xs font-mono tracking-widest text-gray-400 uppercase font-medium">
-                TINFF@10 · 10th Anniversary Edition · September 2026
-              </p>
+            <div className="relative group">
+              <img 
+                src="/src/assets/images/tinff_laurel.png" 
+                alt="TINFF Official Selection" 
+                className="w-56 h-56 md:w-72 md:h-72 object-contain invert brightness-150 contrast-125 transition-transform duration-700 group-hover:scale-105"
+                style={{ mixBlendMode: 'screen' }}
+              />
+              {/* Subtle gold glow behind the logo */}
+              <div className="absolute inset-0 bg-brand-gold/10 blur-3xl rounded-full -z-1 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
-
-            {/* Right Laurel Leaf SVG (Flipped) */}
-            <svg className="w-16 h-20 md:w-24 md:h-28 text-brand-gold opacity-80 transform scale-x-[-1]" viewBox="0 0 100 120" fill="currentColor">
-              <path d="M50,110 C40,90 20,80 15,60 C10,45 20,30 35,25 C45,22 50,15 50,5 C50,15 55,22 65,25 C80,30 90,45 85,60 C80,80 60,90 50,110 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-              {/* Leaves */}
-              <path d="M48,95 C40,85 28,80 25,72 C22,65 28,58 35,58" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M48,75 C38,68 28,62 27,52 C26,45 34,40 40,42" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M48,55 C40,48 32,42 33,32 C34,25 42,22 46,26" fill="none" stroke="currentColor" strokeWidth="2" />
-              <circle cx="50" cy="110" r="3" fill="currentColor" />
-            </svg>
           </motion.div>
         </div>
 
@@ -100,7 +78,7 @@ export default function FestivalNominations() {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-white uppercase"
           >
-            10 OFFICIAL NOMINATIONS
+            {NOMINATIONS.length} OFFICIAL NOMINATIONS
           </motion.h2>
         </div>
 

@@ -76,7 +76,7 @@ export default function StorySection() {
               </p>
               <p>
                 Set against the volatile streets of Nigeria, 
-                <strong className="text-white font-medium"> THE LAST FRIDAY</strong> follows Detective Danjuma — 
+                <strong className="text-white font-medium"> THE LAST FRIDAY</strong> follows Detective Tony — 
                 an uncompromising investigator who refuses to look away. As the conspiracy deepens and threats 
                 escalate, he and the survivor forge a dangerous alliance, racing to expose the truth before 
                 those in power can permanently seal it in silence.
@@ -105,7 +105,7 @@ export default function StorySection() {
             >
               {/* Closeup Portrait */}
               <motion.img
-                src="/src/assets/images/jamilaah_closeup_1782315502201.jpg"
+                src="/src/assets/images/zara_portrait.jpg"
                 alt="Jamilaah Ibrahim as Zara"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto aspect-square object-cover object-center grayscale contrast-[120%] brightness-[90%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"

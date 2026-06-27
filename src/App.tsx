@@ -12,7 +12,8 @@ import VideoMoments from "./components/VideoMoments";
 import GallerySection from "./components/GallerySection";
 import QuotesSection from "./components/QuotesSection";
 import TimelineSection from "./components/TimelineSection";
-import { MOVIE_INFO } from "./data";
+import EPKSection from "./components/EPKSection";
+import { MOVIE_INFO, NOMINATIONS } from "./data";
 import { Film, Award, Heart, Globe, Play, ChevronUp, Radio } from "lucide-react";
 
 export default function App() {
@@ -117,6 +118,7 @@ export default function App() {
                 <button onClick={() => scrollToSection("moments-section")} className="hover:text-brand-red transition-colors cursor-none">MOMENTS</button>
                 <button onClick={() => scrollToSection("gallery-section")} className="hover:text-brand-red transition-colors cursor-none">GALLERY</button>
                 <button onClick={() => scrollToSection("timeline-section")} className="hover:text-brand-red transition-colors cursor-none">TIMELINE</button>
+                <button onClick={() => scrollToSection("epk-section")} className="hover:text-brand-red transition-colors cursor-none">PRESS KIT</button>
               </nav>
 
               {/* Status active score equalizers */}
@@ -168,6 +170,9 @@ export default function App() {
               {/* 9. Chronological Film Journey Timeline */}
               <TimelineSection />
 
+              {/* 10. Official Press Kit (EPK) Section */}
+              <EPKSection />
+
             </main>
 
             {/* PREMIUM CINEMA FOOTER CREDITS ROLL */}
@@ -180,7 +185,7 @@ export default function App() {
                 <div className="flex items-center justify-center gap-6 mb-12 opacity-50">
                   <Award className="w-8 h-8 text-brand-gold" />
                   <span className="text-[10px] font-mono tracking-widest text-gray-400 font-bold uppercase">
-                    TINFF@10 • 10TH ANNIVERSARY EDITION • 10 OFFICIAL NOMINATIONS
+                    TINFF@10 • 10TH ANNIVERSARY EDITION • {NOMINATIONS.length} OFFICIAL NOMINATIONS
                   </span>
                   <Award className="w-8 h-8 text-brand-gold" />
                 </div>

@@ -29,30 +29,54 @@ export class AudioEngine {
     // Create a low-frequency rumble filter (lowpass)
     this.droneFilter = this.ctx.createBiquadFilter();
     this.droneFilter.type = "lowpass";
-    this.droneFilter.frequency.setValueAtTime(120, this.ctx.currentTime);
-    this.droneFilter.Q.setValueAtTime(1.5, this.ctx.currentTime);
+    this.droneFilter.frequency.setValueAtTime(100, this.ctx.currentTime);
+    this.droneFilter.Q.setValueAtTime(2.0, this.ctx.currentTime);
     this.droneFilter.connect(this.masterGain);
 
     // Drone Oscillators
     this.droneGain = this.ctx.createGain();
-    this.droneGain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+    this.droneGain.gain.setValueAtTime(0.20, this.ctx.currentTime);
     this.droneGain.connect(this.droneFilter);
 
-    // Osc 1: Deep C1 bass (approx 32.7Hz) sawtooth
+    // Osc 1: Deep C1 bass (approx 32.7Hz) sawtooth for gritty tension
     this.droneOsc1 = this.ctx.createOscillator();
     this.droneOsc1.type = "sawtooth";
     this.droneOsc1.frequency.setValueAtTime(32.7, this.ctx.currentTime);
     
-    // Osc 2: Deep detuned bass (approx 32.9Hz) triangle for phasing texture
+    // Osc 2: Deep detuned bass (approx 33.2Hz) sawtooth for intense phasing rumble
     this.droneOsc2 = this.ctx.createOscillator();
-    this.droneOsc2.type = "triangle";
-    this.droneOsc2.frequency.setValueAtTime(32.9, this.ctx.currentTime);
+    this.droneOsc2.type = "sawtooth";
+    this.droneOsc2.frequency.setValueAtTime(33.2, this.ctx.currentTime);
 
     this.droneOsc1.connect(this.droneGain);
     this.droneOsc2.connect(this.droneGain);
 
     this.droneOsc1.start();
     this.droneOsc2.start();
+
+    // Rhythmic Tense Heartbeat Pulse
+    const pulseOsc = this.ctx.createOscillator();
+    pulseOsc.type = "triangle";
+    pulseOsc.frequency.setValueAtTime(45, this.ctx.currentTime); // Sub-bass heartbeat thud
+
+    const pulseGain = this.ctx.createGain();
+    pulseGain.gain.setValueAtTime(0.08, this.ctx.currentTime);
+
+    const lfo = this.ctx.createOscillator();
+    lfo.type = "sine";
+    lfo.frequency.setValueAtTime(1.5, this.ctx.currentTime); // 90 BPM tense pulse
+
+    const lfoGain = this.ctx.createGain();
+    lfoGain.gain.setValueAtTime(0.06, this.ctx.currentTime);
+
+    lfo.connect(lfoGain);
+    lfoGain.connect(pulseGain.gain);
+    
+    pulseOsc.connect(pulseGain);
+    pulseGain.connect(this.masterGain);
+
+    pulseOsc.start();
+    lfo.start();
     
     // Ambient modulation loop (gently sweeps filter cutoff for organic feeling)
     this.sweepFilter();
@@ -114,28 +138,38 @@ export class AudioEngine {
 
     const now = this.ctx.currentTime;
     
-    const osc = this.ctx.createOscillator();
+    // Inception-style "Braam" / riser hybrid sound
+    const osc1 = this.ctx.createOscillator();
+    const osc2 = this.ctx.createOscillator();
     const gain = this.ctx.createGain();
     const filter = this.ctx.createBiquadFilter();
 
-    osc.type = "sine";
-    // Slide frequency from 80Hz up to 180Hz (deep sweep)
-    osc.frequency.setValueAtTime(80, now);
-    osc.frequency.exponentialRampToValueAtTime(180, now + 0.4);
+    osc1.type = "sawtooth";
+    osc1.frequency.setValueAtTime(55, now); // A1 bass note
+    osc1.frequency.exponentialRampToValueAtTime(110, now + 0.6);
+
+    osc2.type = "sawtooth";
+    osc2.frequency.setValueAtTime(55.4, now); // Detuned second sawtooth for growl
+    osc2.frequency.exponentialRampToValueAtTime(110.8, now + 0.6);
 
     filter.type = "lowpass";
-    filter.frequency.setValueAtTime(200, now);
+    filter.frequency.setValueAtTime(120, now);
+    filter.frequency.exponentialRampToValueAtTime(380, now + 0.6);
+    filter.Q.setValueAtTime(4.0, now); // high resonance for gritty sweep
 
     gain.gain.setValueAtTime(0, now);
-    gain.gain.linearRampToValueAtTime(0.08, now + 0.1);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+    gain.gain.linearRampToValueAtTime(0.12, now + 0.1);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
 
-    osc.connect(filter);
+    osc1.connect(filter);
+    osc2.connect(filter);
     filter.connect(gain);
     gain.connect(this.masterGain);
 
-    osc.start(now);
-    osc.stop(now + 0.4);
+    osc1.start(now);
+    osc2.start(now);
+    osc1.stop(now + 0.6);
+    osc2.stop(now + 0.6);
   }
 
   // Play a metallic click when entering a section
