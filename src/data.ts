@@ -75,11 +75,7 @@ export const NOMINATIONS: Nomination[] = [
     category: "Best African Drama",
     description: "Recognizing high emotional stakes, intense acting performances, and deep storytelling craft.",
   },
-  {
-    id: "nom-3",
-    category: "Best Photography",
-    description: "Acknowledging the stunning widescreen cinematography, rich lighting, and breathtaking visual identity of Nigeria.",
-  },
+
   {
     id: "nom-4",
     category: "Best Actress (Africa)",
@@ -272,8 +268,8 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     id: "time-4",
     phase: "Phase 04",
-    title: "11 Official TINFF@10 Nominations",
-    description: "The Last Friday earns 11 official nominations at TINFF's historic 10th Anniversary Edition — including Best African Film, Best African Drama, Best Photography, Best Actress (Africa), Best Actress (Nollywood), Best Supporting Actor (Africa) x2, Best Actor (Africa) x2, Best Producer, and Best Original Music Score International.",
+    title: "10 Official TINFF@10 Nominations",
+    description: "The Last Friday earns 10 official nominations at TINFF's historic 10th Anniversary Edition — including Best African Film, Best African Drama, Best Actress (Africa), Best Actress (Nollywood), Best Supporting Actor (Africa) x2, Best Actor (Africa) x2, Best Producer, and Best Original Music Score International.",
     date: "June 2026",
     status: "current",
   },
