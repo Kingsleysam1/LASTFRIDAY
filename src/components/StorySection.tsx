@@ -105,7 +105,7 @@ export default function StorySection() {
             >
               {/* Closeup Portrait */}
               <motion.img
-                src="/src/assets/images/zara_portrait.jpg"
+                src="/images/zara_portrait.jpg"
                 alt="Jamilaah Ibrahim as Zara"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto aspect-square object-cover object-center grayscale contrast-[120%] brightness-[90%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"

@@ -64,7 +64,7 @@ export default function TrailerSection() {
               >
                 {/* Background Poster Cover Image */}
                 <img
-                  src="/src/assets/images/action_scene_still_1782315520243.jpg"
+                  src="/images/action_scene_still_1782315520243.jpg"
                   alt="Trailer Cover Still"
                   referrerPolicy="no-referrer"
                   className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-[1.03] transition-transform duration-[2000ms]"

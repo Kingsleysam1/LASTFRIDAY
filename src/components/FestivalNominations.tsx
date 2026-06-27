@@ -48,7 +48,7 @@ export default function FestivalNominations() {
           >
             <div className="relative group">
               <img 
-                src="/src/assets/images/tinff_laurel.png" 
+                src="/images/tinff_laurel.png" 
                 alt="TINFF Official Selection" 
                 className="w-56 h-56 md:w-72 md:h-72 object-contain invert brightness-150 contrast-125 transition-transform duration-700 group-hover:scale-105"
                 style={{ mixBlendMode: 'screen' }}
