@@ -6,14 +6,14 @@ import { Quote } from "lucide-react";
 
 export default function StorySection() {
   return (
-    <section 
+    <section
       id="story-section"
       className="relative py-24 md:py-36 bg-brand-bg px-6 md:px-16 overflow-hidden border-t border-white/5"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(181,18,27,0.04)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+
         {/* Section Header */}
         <div className="mb-16 md:mb-24">
           <motion.div
@@ -28,7 +28,7 @@ export default function StorySection() {
               The Premise
             </span>
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -42,10 +42,10 @@ export default function StorySection() {
 
         {/* Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left: Oversized Dramatic Quote & Detailed Text */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
-            
+
             {/* Massive Dramatic Statement */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -69,20 +69,20 @@ export default function StorySection() {
               className="space-y-6 text-gray-300 font-light leading-relaxed text-md max-w-2xl"
             >
               <p>
-                <strong className="text-white font-medium">Inspired by true events.</strong> A desperate young woman&rsquo;s 
-                search for help leads her into a night of unspeakable brutality. But when powerful political figures 
-                mobilize to silence every witness and bury every trace of the crime, the system itself becomes 
+                <strong className="text-white font-medium">Inspired by true events.</strong> A desperate young woman&rsquo;s
+                search for help leads her into a night of unspeakable brutality. But when powerful political figures
+                mobilize to silence every witness and bury every trace of the crime, the system itself becomes
                 the weapon used against her.
               </p>
               <p>
-                Set against the volatile streets of Nigeria, 
-                <strong className="text-white font-medium"> THE LAST FRIDAY</strong> follows Detective Tony — 
-                an uncompromising investigator who refuses to look away. As the conspiracy deepens and threats 
-                escalate, he and the survivor forge a dangerous alliance, racing to expose the truth before 
+                Set against the volatile streets of Nigeria,
+                <strong className="text-white font-medium"> THE LAST FRIDAY</strong> follows Detective Tony —
+                an uncompromising investigator who refuses to look away. As the conspiracy deepens and threats
+                escalate, he and the survivor forge a dangerous alliance, racing to expose the truth before
                 those in power can permanently seal it in silence.
               </p>
               <p>
-                A film about justice, survival, resilience, and the devastating cost of exposing the truth 
+                A film about justice, survival, resilience, and the devastating cost of exposing the truth
                 in a world designed to protect the guilty.
               </p>
               <p className="text-brand-gold font-mono text-xs tracking-widest uppercase font-semibold">
@@ -99,18 +99,18 @@ export default function StorySection() {
             transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
             className="lg:col-span-5 relative"
           >
-            <div 
+            <div
               className="group relative border border-white/5 bg-brand-surface shadow-2xl overflow-hidden cursor-hover-explore"
               onMouseEnter={() => globalAudio.playHoverSweep()}
             >
               {/* Closeup Portrait */}
               <motion.img
                 src="/images/zara_portrait.jpg"
-                alt="Jamilaah Ibrahim as Zara"
+                alt="Jamilaah Ibrahim as Tricia"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto aspect-square object-cover object-center grayscale contrast-[120%] brightness-[90%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"
               />
-              
+
               {/* Outer Vignette Glow */}
               <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/90 via-transparent to-transparent opacity-80" />
               <div className="absolute inset-0 border border-brand-red/0 group-hover:border-brand-red/40 transition-colors duration-700 pointer-events-none" />
@@ -119,7 +119,7 @@ export default function StorySection() {
               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                 <div>
                   <p className="text-[10px] font-mono tracking-widest text-brand-red font-bold uppercase mb-1">CHARACTER PORTRAIT</p>
-                  <p className="text-lg font-display font-bold text-white tracking-wide uppercase">ZARA</p>
+                  <p className="text-lg font-display font-bold text-white tracking-wide uppercase">TRICIA</p>
                 </div>
                 <div className="text-right">
                   <p className="text-[10px] font-mono tracking-widest text-brand-gold font-bold uppercase mb-1">PORTRAYED BY</p>

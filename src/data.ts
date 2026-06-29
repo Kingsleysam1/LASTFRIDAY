@@ -66,7 +66,7 @@ export const CAST_MEMBERS: CastMember[] = [
     id: "cast-7",
     name: "Anthony Uzuakpunwa",
     role: "Producer / Executive Producer",
-    imageUrl: "/images/1.jpg",
+    imageUrl: "/images/anthony.jpg",
     nomination: "Best Producer",
   },
 ];
