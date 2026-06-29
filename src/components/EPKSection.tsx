@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MOVIE_INFO, EPK_INFO } from "../data";
 import { globalAudio } from "./AudioEngine";
-import { FileText, BookOpen, User, Film, Award, Phone, Mail, MapPin, Printer } from "lucide-react";
+import { FileText, BookOpen, User, Film, Award, Phone, Mail, MapPin, Printer, Instagram } from "lucide-react";
 
 type TabType = "cover" | "story" | "director" | "cast-crew" | "festivals";
 
@@ -138,6 +138,7 @@ export default function EPKSection() {
                         <ul className="space-y-1 text-xs font-mono">
                           <li className="flex items-center gap-2"><Phone className="w-3.5 h-3.5 text-brand-red" /> {EPK_INFO.contact.phone}</li>
                           <li className="flex items-center gap-2"><Mail className="w-3.5 h-3.5 text-brand-red" /> {EPK_INFO.contact.email}</li>
+                          <li className="flex items-center gap-2"><Instagram className="w-3.5 h-3.5 text-brand-red" /> <a href={EPK_INFO.contact.instagram} target="_blank" rel="noreferrer" className="hover:text-brand-red transition-colors">@thelastfriday2026</a></li>
                           <li className="flex items-center gap-2 text-gray-400"><MapPin className="w-3.5 h-3.5" /> {EPK_INFO.contact.address}</li>
                         </ul>
                       </div>

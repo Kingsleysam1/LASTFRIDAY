@@ -62,6 +62,13 @@ export const CAST_MEMBERS: CastMember[] = [
     imageUrl: "/images/promise.jpg",
     nomination: "Best Actress (Nollywood)",
   },
+  {
+    id: "cast-7",
+    name: "Anthony Uzuakpunwa",
+    role: "Producer / Executive Producer",
+    imageUrl: "/images/1.jpg",
+    nomination: "Best Producer",
+  },
 ];
 
 export const NOMINATIONS: Nomination[] = [
@@ -432,6 +439,7 @@ export const EPK_INFO = {
     contactPerson: "Anthony Uzuakpunwa",
     role: "Executive Producer / Producer",
     phone: "424-356-3825",
-    email: "backtolifeentertainment@gmail.com",
+    email: "TheLastFridaymovie@gmail.com",
+    instagram: "https://www.instagram.com/thelastfriday2026?igsh=MzRlODBiNWFlZA==",
   }
 };

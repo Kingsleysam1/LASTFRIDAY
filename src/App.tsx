@@ -14,7 +14,7 @@ import QuotesSection from "./components/QuotesSection";
 import TimelineSection from "./components/TimelineSection";
 import EPKSection from "./components/EPKSection";
 import { MOVIE_INFO, NOMINATIONS } from "./data";
-import { Film, Award, Heart, Globe, Play, ChevronUp, Radio } from "lucide-react";
+import { Film, Award, Heart, Globe, Play, ChevronUp, Radio, Instagram } from "lucide-react";
 
 export default function App() {
   const [introCompleted, setIntroCompleted] = useState(false);
@@ -220,6 +220,11 @@ export default function App() {
                 <p className="text-[10px] text-gray-600 font-mono tracking-widest uppercase">
                   &copy; {new Date().getFullYear()} BACK TO LIFE ENTERTAINMENT. ALL RIGHTS RESERVED.
                 </p>
+                <div className="flex items-center justify-center gap-4 mt-4">
+                  <a href="https://www.instagram.com/thelastfriday2026?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noreferrer" className="text-gray-500 hover:text-brand-red transition-colors flex items-center gap-1 text-[10px] font-mono tracking-widest uppercase">
+                    <Instagram className="w-4 h-4" /> Instagram
+                  </a>
+                </div>
                 <div className="flex items-center justify-center gap-1 text-[9px] text-gray-600 font-mono tracking-widest uppercase mt-4">
                   <span>BUILT FOR FESTIVALS &bull; POWERED BY AI STUDIO APPS</span>
                 </div>
