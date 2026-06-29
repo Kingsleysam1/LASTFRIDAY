@@ -21,6 +21,13 @@ export const MOVIE_INFO = {
 
 export const CAST_MEMBERS: CastMember[] = [
   {
+    id: "cast-7",
+    name: "Anthony Uzuakpunwa",
+    role: "Producer / Executive Producer",
+    imageUrl: "/images/anthony.jpg",
+    nomination: "Best Producer",
+  },
+  {
     id: "cast-1",
     name: "Jamilaah Ibrahim",
     role: "Tricia",
@@ -61,13 +68,6 @@ export const CAST_MEMBERS: CastMember[] = [
     role: "Joan",
     imageUrl: "/images/promise.jpg",
     nomination: "Best Actress (Nollywood)",
-  },
-  {
-    id: "cast-7",
-    name: "Anthony Uzuakpunwa",
-    role: "Producer / Executive Producer",
-    imageUrl: "/images/anthony.jpg",
-    nomination: "Best Producer",
   },
 ];
 
