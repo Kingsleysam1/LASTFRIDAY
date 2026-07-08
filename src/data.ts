@@ -82,6 +82,11 @@ export const NOMINATIONS: Nomination[] = [
     category: "Best African Drama",
     description: "Recognizing high emotional stakes, intense acting performances, and deep storytelling craft.",
   },
+  {
+    id: "nom-3",
+    category: "Best Photography",
+    description: "The best visual storytelling",
+  },
 
   {
     id: "nom-4",
