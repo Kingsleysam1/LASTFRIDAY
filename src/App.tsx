@@ -8,6 +8,7 @@ import StorySection from "./components/StorySection";
 import TrailerSection from "./components/TrailerSection";
 import CastSection from "./components/CastSection";
 import FestivalNominations from "./components/FestivalNominations";
+import ScreeningSection from "./components/ScreeningSection";
 import VideoMoments from "./components/VideoMoments";
 import GallerySection from "./components/GallerySection";
 import QuotesSection from "./components/QuotesSection";
@@ -115,6 +116,7 @@ export default function App() {
                 <button onClick={() => scrollToSection("trailer-section")} className="hover:text-brand-red transition-colors cursor-none">TRAILER</button>
                 <button onClick={() => scrollToSection("cast-section")} className="hover:text-brand-red transition-colors cursor-none">THE CAST</button>
                 <button onClick={() => scrollToSection("nominations-section")} className="hover:text-brand-gold transition-colors cursor-none">NOMINATIONS</button>
+                <button onClick={() => scrollToSection("screening-section")} className="hover:text-brand-red transition-colors cursor-none">SCREENING</button>
                 <button onClick={() => scrollToSection("moments-section")} className="hover:text-brand-red transition-colors cursor-none">MOMENTS</button>
                 <button onClick={() => scrollToSection("gallery-section")} className="hover:text-brand-red transition-colors cursor-none">GALLERY</button>
                 <button onClick={() => scrollToSection("timeline-section")} className="hover:text-brand-red transition-colors cursor-none">TIMELINE</button>
@@ -157,6 +159,9 @@ export default function App() {
 
               {/* 5. Festival Credentials & Nominations Section */}
               <FestivalNominations />
+
+              {/* 5b. Canada Screening Venue Details */}
+              <ScreeningSection />
 
               {/* 6. Video Moments Interactive Loop Cards */}
               <VideoMoments />
